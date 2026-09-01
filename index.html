@@ -75,10 +75,21 @@
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero__content">
-          <p class="eyebrow hero-entrance" style="--delay: 0.08s">
-            <span class="status-dot" aria-hidden="true"></span>
-            OPEN TO WORK · SHENZHEN
-          </p>
+          <div class="hero__identity hero-entrance" style="--delay: 0.08s">
+            <figure class="profile-avatar glass-surface">
+              <img
+                src="./assets/yang-xiaolong.jpg"
+                width="300"
+                height="400"
+                alt="杨小龙职业头像"
+                fetchpriority="high"
+              />
+            </figure>
+            <p class="eyebrow">
+              <span class="status-dot" aria-hidden="true"></span>
+              OPEN TO WORK · SHENZHEN
+            </p>
+          </div>
           <h1 class="hero__title hero-entrance" id="hero-title" style="--delay: 0.15s">
             <span>杨小龙</span>
             <span class="hero__title-glow" aria-hidden="true">杨小龙</span>
@@ -126,7 +137,7 @@
           </div>
         </div>
 
-        <div class="hero__visual hero-entrance" style="--delay: 0.2s" aria-label="个人照片与核心能力">
+        <div class="hero__visual hero-entrance" style="--delay: 0.2s" aria-label="核心能力">
           <div class="portrait-orbit" data-parallax>
             <div class="orbit orbit--outer" aria-hidden="true"></div>
             <div class="orbit orbit--inner" aria-hidden="true"></div>
@@ -174,16 +185,6 @@
                 <strong>LLM · TOOLS · CODE</strong>
               </div>
             </div>
-
-            <figure class="profile-avatar glass-surface" aria-label="杨小龙头像">
-              <img
-                src="./assets/yang-xiaolong.jpg"
-                width="300"
-                height="400"
-                alt="杨小龙职业头像"
-              />
-              <span class="profile-avatar__status" aria-hidden="true"></span>
-            </figure>
 
             <div class="focus-card glass-surface" aria-hidden="true">
               <span class="focus-card__signal"></span>
