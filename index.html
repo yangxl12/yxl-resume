@@ -138,61 +138,38 @@
         </div>
 
         <div class="hero__visual hero-entrance" style="--delay: 0.2s" aria-label="核心能力">
-          <div class="portrait-orbit" data-parallax>
-            <div class="orbit orbit--outer" aria-hidden="true"></div>
-            <div class="orbit orbit--inner" aria-hidden="true"></div>
-
-            <div class="orbit-label orbit-label--ai glass-surface">
-              <span class="orbit-label__icon">AI</span>
-              <span>LLM · RAG</span>
-            </div>
-            <div class="orbit-label orbit-label--desktop glass-surface">
-              <span class="orbit-label__icon">⌘</span>
-              <span>Electron</span>
-            </div>
-            <div class="orbit-label orbit-label--quality glass-surface">
-              <span class="orbit-label__icon">✓</span>
-              <span>工程质量</span>
-            </div>
-            <div class="orbit-label orbit-label--product glass-surface">
-              <span class="orbit-label__icon">◇</span>
-              <span>产品体验</span>
+          <div class="practice-panel interactive-glass" role="group" aria-label="核心能力">
+            <div class="practice-panel__header">
+              <span>CORE PRACTICE</span>
+              <span class="practice-panel__status"><i aria-hidden="true"></i> AI × ENGINEERING</span>
             </div>
 
-            <div class="agent-core interactive-glass" role="img" aria-label="AI Agent、LLM 与代码开发能力图标">
-              <div class="agent-core__halo" aria-hidden="true">
-                <svg class="agent-core__mark" viewBox="0 0 180 180">
-                  <defs>
-                    <linearGradient id="agent-stroke" x1="24" y1="24" x2="156" y2="156" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#7fe7ff" />
-                      <stop offset="0.52" stop-color="#3979ff" />
-                      <stop offset="1" stop-color="#a895ff" />
-                    </linearGradient>
-                  </defs>
-                  <circle class="agent-core__ring" cx="90" cy="90" r="62" />
-                  <path class="agent-core__circuit" d="M90 28v18M90 134v18M28 90h18M134 90h18M46 46l13 13M121 121l13 13M134 46l-13 13M59 121l-13 13" />
-                  <circle class="agent-core__node" cx="90" cy="28" r="4" />
-                  <circle class="agent-core__node" cx="152" cy="90" r="4" />
-                  <circle class="agent-core__node" cx="90" cy="152" r="4" />
-                  <circle class="agent-core__node" cx="28" cy="90" r="4" />
-                  <rect class="agent-core__terminal" x="54" y="58" width="72" height="64" rx="20" />
-                  <path class="agent-core__code" d="m76 78-12 12 12 12M104 78l12 12-12 12M96 72 84 108" />
-                  <path class="agent-core__spark" d="M127 43v13M120.5 49.5h13" />
-                </svg>
-              </div>
-              <div class="agent-core__caption">
-                <span>AI AGENT</span>
-                <strong>LLM · TOOLS · CODE</strong>
-              </div>
+            <div class="practice-panel__mark" aria-hidden="true">
+              <svg viewBox="0 0 160 160">
+                <defs>
+                  <linearGradient id="practice-stroke" x1="28" y1="24" x2="136" y2="140" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#76dcff" />
+                    <stop offset="0.52" stop-color="#3477ff" />
+                    <stop offset="1" stop-color="#8f7dff" />
+                  </linearGradient>
+                </defs>
+                <rect class="practice-panel__tile" x="25" y="25" width="110" height="110" rx="36" />
+                <path class="practice-panel__code" d="m66 61-19 19 19 19M94 61l19 19-19 19M88 53 72 107" />
+                <path class="practice-panel__signal" d="M80 25V12M135 80h13M80 135v13M25 80H12" />
+              </svg>
             </div>
 
-            <div class="focus-card glass-surface" aria-hidden="true">
-              <span class="focus-card__signal"></span>
-              <div>
-                <small>CURRENT FOCUS</small>
-                <strong>AI × Desktop × Workflow</strong>
-              </div>
+            <div class="practice-panel__copy">
+              <span>AI APPLICATION ENGINEERING</span>
+              <strong>AI 应用工程</strong>
             </div>
+
+            <ul class="practice-panel__skills" aria-label="核心能力列表">
+              <li>LLM · RAG</li>
+              <li>Electron</li>
+              <li>工程质量</li>
+              <li>产品体验</li>
+            </ul>
           </div>
         </div>
 

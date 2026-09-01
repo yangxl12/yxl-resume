@@ -84,28 +84,6 @@ document.querySelectorAll(".interactive-glass").forEach((surface) => {
   });
 });
 
-const parallaxArea = document.querySelector("[data-parallax]");
-const agentCore = document.querySelector(".agent-core");
-
-if (parallaxArea && agentCore && !prefersReducedMotion && window.matchMedia("(pointer: fine)").matches) {
-  parallaxArea.addEventListener("pointermove", (event) => {
-    const bounds = parallaxArea.getBoundingClientRect();
-    const normalizedX = (event.clientX - bounds.left) / bounds.width - 0.5;
-    const normalizedY = (event.clientY - bounds.top) / bounds.height - 0.5;
-
-    agentCore.style.setProperty("--parallax-x", `${(normalizedX * 13).toFixed(2)}px`);
-    agentCore.style.setProperty("--parallax-y", `${(normalizedY * 10).toFixed(2)}px`);
-    agentCore.style.setProperty("--parallax-rx", `${(-normalizedY * 3).toFixed(2)}deg`);
-    agentCore.style.setProperty("--parallax-ry", `${(normalizedX * 4).toFixed(2)}deg`);
-  });
-
-  parallaxArea.addEventListener("pointerleave", () => {
-    ["--parallax-x", "--parallax-y", "--parallax-rx", "--parallax-ry"].forEach((property) =>
-      agentCore.style.removeProperty(property),
-    );
-  });
-}
-
 if (!prefersReducedMotion && window.matchMedia("(pointer: fine)").matches) {
   document.querySelectorAll(".magnetic").forEach((button) => {
     button.addEventListener("pointermove", (event) => {
