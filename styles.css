@@ -2563,6 +2563,10 @@ svg {
     left: 34mm;
   }
 
+  .timeline {
+    gap: 2mm;
+  }
+
   .timeline-item {
     grid-template-columns: 30mm 8mm minmax(0, 1fr);
   }
@@ -2570,20 +2574,20 @@ svg {
   .timeline-item__date {
     grid-column: 1;
     grid-row: auto;
-    padding-top: 4mm;
+    padding-top: 3mm;
     font-size: 6pt;
   }
 
   .timeline-item__marker {
     grid-column: 2;
     grid-row: auto;
-    padding-top: 4.5mm;
+    padding-top: 3.5mm;
   }
 
   .timeline-item__content {
     grid-column: 3;
     grid-row: auto;
-    padding: 4mm 5mm;
+    padding: 3mm 4mm;
     border-radius: 4mm;
   }
 
@@ -2598,13 +2602,17 @@ svg {
   }
 
   .timeline-item__content > p {
-    margin-top: 2mm;
+    margin-top: 1.2mm;
+  }
+
+  .stack {
+    padding-top: 4mm;
   }
 
   .stack-panel {
     grid-template-columns: 0.7fr 1.3fr;
-    gap: 8mm;
-    padding: 6mm;
+    gap: 6mm;
+    padding: 4mm;
   }
 
   .stack-panel__intro > p:last-child {
@@ -2615,7 +2623,7 @@ svg {
   .stack-row {
     grid-template-columns: 25mm minmax(0, 1fr);
     gap: 3mm;
-    padding: 3mm 0;
+    padding: 2mm 0;
   }
 
   .stack-row h3 {
@@ -2628,8 +2636,9 @@ svg {
   }
 
   .education {
-    margin-top: 5mm;
-    padding: 5mm 6mm;
+    margin-top: 3mm;
+    padding: 3.5mm 5mm;
+    break-inside: avoid;
   }
 
   .education h3 {
