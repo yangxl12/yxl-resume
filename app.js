@@ -85,23 +85,23 @@ document.querySelectorAll(".interactive-glass").forEach((surface) => {
 });
 
 const parallaxArea = document.querySelector("[data-parallax]");
-const portrait = document.querySelector(".portrait-card");
+const agentCore = document.querySelector(".agent-core");
 
-if (parallaxArea && portrait && !prefersReducedMotion && window.matchMedia("(pointer: fine)").matches) {
+if (parallaxArea && agentCore && !prefersReducedMotion && window.matchMedia("(pointer: fine)").matches) {
   parallaxArea.addEventListener("pointermove", (event) => {
     const bounds = parallaxArea.getBoundingClientRect();
     const normalizedX = (event.clientX - bounds.left) / bounds.width - 0.5;
     const normalizedY = (event.clientY - bounds.top) / bounds.height - 0.5;
 
-    portrait.style.setProperty("--parallax-x", `${(normalizedX * 13).toFixed(2)}px`);
-    portrait.style.setProperty("--parallax-y", `${(normalizedY * 10).toFixed(2)}px`);
-    portrait.style.setProperty("--parallax-rx", `${(-normalizedY * 3).toFixed(2)}deg`);
-    portrait.style.setProperty("--parallax-ry", `${(normalizedX * 4).toFixed(2)}deg`);
+    agentCore.style.setProperty("--parallax-x", `${(normalizedX * 13).toFixed(2)}px`);
+    agentCore.style.setProperty("--parallax-y", `${(normalizedY * 10).toFixed(2)}px`);
+    agentCore.style.setProperty("--parallax-rx", `${(-normalizedY * 3).toFixed(2)}deg`);
+    agentCore.style.setProperty("--parallax-ry", `${(normalizedX * 4).toFixed(2)}deg`);
   });
 
   parallaxArea.addEventListener("pointerleave", () => {
     ["--parallax-x", "--parallax-y", "--parallax-rx", "--parallax-ry"].forEach((property) =>
-      portrait.style.removeProperty(property),
+      agentCore.style.removeProperty(property),
     );
   });
 }
@@ -121,6 +121,17 @@ if (!prefersReducedMotion && window.matchMedia("(pointer: fine)").matches) {
   });
 }
 
-document.querySelectorAll("[data-print]").forEach((button) => {
-  button.addEventListener("click", () => window.print());
+const mobilePrintFallback =
+  window.matchMedia("(pointer: coarse)").matches ||
+  (navigator.maxTouchPoints > 0 && window.matchMedia("(max-width: 900px)").matches);
+
+document.querySelectorAll("[data-print]").forEach((control) => {
+  control.addEventListener("click", (event) => {
+    // Mobile browsers and embedded WebViews often ignore window.print().
+    // Let the link open the prepared PDF there; desktop browsers keep the live print preview.
+    if (mobilePrintFallback) return;
+
+    event.preventDefault();
+    window.print();
+  });
 });

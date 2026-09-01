@@ -55,12 +55,19 @@
           <a href="#experience">经历</a>
           <a href="#contact">联系</a>
         </div>
-        <button class="nav__print" type="button" data-print aria-label="打印或导出 PDF">
+        <a
+          class="nav__print"
+          href="./assets/yang-xiaolong-resume.pdf"
+          target="_blank"
+          rel="noopener"
+          data-print
+          aria-label="打印或打开 PDF 简历"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M7 8V3h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14h10v7H7z" />
           </svg>
           <span>导出</span>
-        </button>
+        </a>
         <span class="nav__progress" aria-hidden="true"></span>
       </nav>
     </header>
@@ -141,19 +148,41 @@
               <span>产品体验</span>
             </div>
 
-            <figure class="portrait-card interactive-glass">
-              <div class="portrait-card__image-wrap">
-                <img
-                  src="./assets/yang-xiaolong.jpg"
-                  width="300"
-                  height="400"
-                  alt="杨小龙职业形象照"
-                />
+            <div class="agent-core interactive-glass" role="img" aria-label="AI Agent、LLM 与代码开发能力图标">
+              <div class="agent-core__halo" aria-hidden="true">
+                <svg class="agent-core__mark" viewBox="0 0 180 180">
+                  <defs>
+                    <linearGradient id="agent-stroke" x1="24" y1="24" x2="156" y2="156" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#7fe7ff" />
+                      <stop offset="0.52" stop-color="#3979ff" />
+                      <stop offset="1" stop-color="#a895ff" />
+                    </linearGradient>
+                  </defs>
+                  <circle class="agent-core__ring" cx="90" cy="90" r="62" />
+                  <path class="agent-core__circuit" d="M90 28v18M90 134v18M28 90h18M134 90h18M46 46l13 13M121 121l13 13M134 46l-13 13M59 121l-13 13" />
+                  <circle class="agent-core__node" cx="90" cy="28" r="4" />
+                  <circle class="agent-core__node" cx="152" cy="90" r="4" />
+                  <circle class="agent-core__node" cx="90" cy="152" r="4" />
+                  <circle class="agent-core__node" cx="28" cy="90" r="4" />
+                  <rect class="agent-core__terminal" x="54" y="58" width="72" height="64" rx="20" />
+                  <path class="agent-core__code" d="m76 78-12 12 12 12M104 78l12 12-12 12M96 72 84 108" />
+                  <path class="agent-core__spark" d="M127 43v13M120.5 49.5h13" />
+                </svg>
               </div>
-              <figcaption>
-                <span>BUILDING NOW</span>
-                <strong>AI-native products</strong>
-              </figcaption>
+              <div class="agent-core__caption">
+                <span>AI AGENT</span>
+                <strong>LLM · TOOLS · CODE</strong>
+              </div>
+            </div>
+
+            <figure class="profile-avatar glass-surface" aria-label="杨小龙头像">
+              <img
+                src="./assets/yang-xiaolong.jpg"
+                width="300"
+                height="400"
+                alt="杨小龙职业头像"
+              />
+              <span class="profile-avatar__status" aria-hidden="true"></span>
             </figure>
 
             <div class="focus-card glass-surface" aria-hidden="true">
