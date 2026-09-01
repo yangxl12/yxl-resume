@@ -258,12 +258,26 @@ svg {
 }
 
 .nav__links a {
+  display: grid;
+  align-items: center;
+  justify-items: center;
   padding: 7px 15px;
   border-radius: 999px;
   color: var(--muted);
   font-size: 13px;
   font-weight: 600;
   transition: color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nav__links svg {
+  display: none;
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
 }
 
 .nav__links a:hover,
@@ -1688,11 +1702,30 @@ svg {
   }
 
   .nav {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    column-gap: 6px;
     min-height: 58px;
   }
 
   .nav__links {
+    display: flex;
+    gap: 2px;
+    width: max-content;
+    max-width: 100%;
+    padding: 3px;
+  }
+
+  .nav__links a {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+
+  .nav__links svg {
+    display: block;
+  }
+
+  .nav__label {
     display: none;
   }
 
@@ -1804,6 +1837,21 @@ svg {
 
   body::before {
     background-size: 40px 40px;
+  }
+
+  .site-header {
+    width: calc(100vw - 16px);
+  }
+
+  .nav {
+    column-gap: 4px;
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+
+  .nav__monogram {
+    width: 40px;
+    height: 40px;
   }
 
   .nav__name,
