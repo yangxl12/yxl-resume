@@ -38,10 +38,6 @@
 
     <header class="site-header" aria-label="页面导航">
       <nav class="nav">
-        <a class="nav__brand" href="#top" aria-label="返回顶部">
-          <strong>杨小龙</strong>
-          <span>YANG XIAOLONG</span>
-        </a>
         <div class="nav__links" aria-label="章节导航">
           <a href="#capabilities">能力</a>
           <a href="#projects">项目</a>
@@ -57,14 +53,22 @@
         >
           PDF / 打印
         </a>
-        <span class="nav__progress" aria-hidden="true"></span>
       </nav>
     </header>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero__content">
-          <p class="eyebrow hero-entrance" style="--delay: 0.05s">OPEN TO WORK · SHENZHEN</p>
+          <figure class="profile-avatar hero-entrance" style="--delay: 0.08s">
+            <img
+              src="./assets/yang-xiaolong.jpg"
+              width="300"
+              height="400"
+              alt="杨小龙职业头像"
+              fetchpriority="high"
+            />
+          </figure>
+
           <h1 class="hero__title hero-entrance" id="hero-title" style="--delay: 0.12s">杨小龙</h1>
           <p class="hero__role hero-entrance" style="--delay: 0.19s">
             全栈开发工程师 <span>·</span> AI 应用开发工程师
@@ -76,7 +80,10 @@
           <dl class="hero__facts hero-entrance" style="--delay: 0.33s" aria-label="个人概况">
             <div><dt>经验</dt><dd>8 年研发经验</dd></div>
             <div><dt>地点</dt><dd>深圳</dd></div>
-            <div><dt>学历</dt><dd>本科</dd></div>
+            <div class="hero__education">
+              <dt>教育</dt>
+              <dd>本科 · 四川轻化工大学 · 工业设计 · 2011.09—2015.07</dd>
+            </div>
           </dl>
 
           <div class="hero__actions hero-entrance" style="--delay: 0.4s">
@@ -85,50 +92,49 @@
           </div>
 
           <address class="hero__contacts hero-entrance" style="--delay: 0.47s">
-            <a href="tel:+8618529521918">185 2952 1918</a>
-            <a href="mailto:18529521918@163.com">18529521918@163.com</a>
+            <a href="tel:+8618529521918" aria-label="拨打手机 185 2952 1918">
+              <span class="hero__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.05 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92Z" />
+                </svg>
+              </span>
+              <strong>185 2952 1918</strong>
+            </a>
+            <a href="mailto:18529521918@163.com" aria-label="发送邮件至 18529521918@163.com">
+              <span class="hero__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="m4 7 8 6 8-6" />
+                </svg>
+              </span>
+              <strong>18529521918@163.com</strong>
+            </a>
           </address>
         </div>
-
-        <figure class="profile-avatar hero-entrance" style="--delay: 0.16s">
-          <img
-            src="./assets/yang-xiaolong.jpg"
-            width="300"
-            height="400"
-            alt="杨小龙职业头像"
-            fetchpriority="high"
-          />
-        </figure>
       </section>
 
       <section class="resume-section" id="capabilities" aria-labelledby="capabilities-title">
         <header class="section-lead reveal">
-          <p class="section-kicker">EXPERTISE</p>
           <h2 id="capabilities-title">核心能力</h2>
-          <p>从需求拆解、架构边界到测试验证与发布交付，覆盖产品落地所需的关键环节。</p>
         </header>
 
         <div class="capability-grid">
           <article class="capability-card reveal">
-            <p class="capability-card__label">AI APPLICATION</p>
             <h3>AI 应用落地</h3>
             <p>熟悉多模型接入、AI Gateway、RAG、AI Skill、Token 治理与智能评审等企业场景。</p>
             <p class="tag-line">LLM · RAG · AI Gateway</p>
           </article>
           <article class="capability-card reveal" style="--reveal-delay: 0.05s">
-            <p class="capability-card__label">DESKTOP</p>
             <h3>桌面端架构</h3>
             <p>掌握 Electron 多进程、跨窗口通信、终端集成、资源隔离与 Windows 构建发布链路。</p>
             <p class="tag-line">Electron · IPC · node-pty</p>
           </article>
           <article class="capability-card reveal" style="--reveal-delay: 0.1s">
-            <p class="capability-card__label">FULL STACK</p>
             <h3>全栈交付</h3>
             <p>以 TypeScript 为主线，覆盖 Vue、React、Node.js、REST API 与多端业务的工程实现。</p>
             <p class="tag-line">TypeScript · Vue 3 · Node.js</p>
           </article>
           <article class="capability-card reveal" style="--reveal-delay: 0.15s">
-            <p class="capability-card__label">QUALITY & UX</p>
             <h3>工程与体验</h3>
             <p>具备视觉设计背景，兼顾架构可维护性、自动化验证、交互细节与最终产品质感。</p>
             <p class="tag-line">Vitest · Playwright · UX</p>
@@ -138,75 +144,84 @@
 
       <section class="resume-section" id="projects" aria-labelledby="projects-title">
         <header class="section-lead reveal">
-          <p class="section-kicker">SELECTED WORK</p>
           <h2 id="projects-title">代表项目</h2>
-          <p>以工程复杂度、职责范围与实际交付结果为筛选标准。</p>
         </header>
 
-        <div class="project-list">
-          <article class="project-card project-card--featured reveal">
-            <div class="project-card__heading">
-              <p class="project-card__type">ELECTRON · GAME ART</p>
-              <h3>Lightbox 游戏美术辅助工具</h3>
-            </div>
-            <div class="project-card__body">
-              <p>
-                腾讯 Lightbox 是面向游戏美术生产的 Electron 浏览器型辅助工具，整合项目空间、文件管理、内置终端与 AI 工具。
-              </p>
-              <ul class="project-points">
-                <li>开发缓存清理、历史记录与国际化等浏览器功能</li>
-                <li>建设多会话内置终端与跨场景文件管理能力</li>
-                <li>参与启动链路分析与性能优化，改善客户端启动体验</li>
-              </ul>
-              <p class="tag-line">Electron · Vue 3 · TypeScript · xterm.js</p>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-card__heading">
-              <p class="project-card__type">AI PLATFORM · GOVERNANCE</p>
-              <h3>企业级 AI 能力统一管理平台</h3>
-            </div>
-            <div class="project-card__body">
-              <p>统一承载多模型接入、组织与额度、Token、安全审计、PR 智能评审、RAG 知识库与 AI Skill。</p>
-              <ul class="project-points">
-                <li>建设 RBAC 与“公司—团队—成员”额度治理</li>
-                <li>打通 Webhook、AI Review 与人工审批闭环</li>
-              </ul>
-              <p class="tag-line">LLM · RAG · RBAC · ECharts</p>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <time>2025.09 — 2026.02</time>
+            <div class="timeline-item__content">
+              <div class="timeline-item__heading">
+                <h3>Lightbox 游戏美术辅助工具</h3>
+                <p>Electron · Vue 3 · TypeScript</p>
+              </div>
+              <div class="project-card__body">
+                <p>
+                  腾讯 Lightbox 是面向游戏美术生产的 Electron 浏览器型辅助工具，整合项目空间、文件管理、内置终端与 AI 工具。
+                </p>
+                <ul class="project-points">
+                  <li>开发缓存清理、历史记录与国际化等浏览器功能</li>
+                  <li>建设多会话内置终端与跨场景文件管理能力</li>
+                  <li>参与启动链路分析与性能优化，改善客户端启动体验</li>
+                </ul>
+              </div>
             </div>
           </article>
 
-          <article class="project-card reveal">
-            <div class="project-card__heading">
-              <p class="project-card__type">ENGINEERING · REFACTOR</p>
-              <h3>文件管理与侧栏模块化重构</h3>
-            </div>
-            <div class="project-card__body">
-              <p>引入 Contract、Host Adapter、Controller 与 Provider Gateway，降低模块耦合并建立可验证的边界。</p>
-              <p class="project-result"><strong>273</strong> 项验证用例 <span>覆盖 50 个测试文件</span></p>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-card__heading">
-              <p class="project-card__type">IOT · MULTI-PLATFORM</p>
-              <h3>光伏云平台及 APP</h3>
-            </div>
-            <div class="project-card__body">
-              <p>牵头 Web 与移动端项目搭建，完成设备管理、远程控制、实时监控与发电数据可视化。</p>
-              <p class="tag-line">Vue 3 · UniApp · Pinia · ECharts</p>
+          <article class="timeline-item reveal">
+            <time>2025.01 — 2025.08</time>
+            <div class="timeline-item__content">
+              <div class="timeline-item__heading">
+                <h3>企业级 AI 能力统一管理平台</h3>
+                <p>LLM · RAG · RBAC</p>
+              </div>
+              <div class="project-card__body">
+                <p>统一承载多模型接入、组织与额度、Token、安全审计、PR 智能评审、RAG 知识库与 AI Skill。</p>
+                <ul class="project-points">
+                  <li>建设 RBAC 与“公司—团队—成员”额度治理</li>
+                  <li>打通 Webhook、AI Review 与人工审批闭环</li>
+                </ul>
+              </div>
             </div>
           </article>
 
-          <article class="project-card reveal">
-            <div class="project-card__heading">
-              <p class="project-card__type">MOBILITY · MINI PROGRAM</p>
-              <h3>智慧出行小程序及管理平台</h3>
+          <article class="timeline-item reveal">
+            <time>2024.05 — 2024.12</time>
+            <div class="timeline-item__content">
+              <div class="timeline-item__heading">
+                <h3>文件管理与侧栏模块化重构</h3>
+                <p>架构重构 · 自动化验证</p>
+              </div>
+              <div class="project-card__body">
+                <p>引入 Contract、Host Adapter、Controller 与 Provider Gateway，降低模块耦合并建立可验证的边界。</p>
+                <p class="project-result"><strong>273</strong> 项验证用例 <span>覆盖 50 个测试文件</span></p>
+              </div>
             </div>
-            <div class="project-card__body">
-              <p>独立完成项目搭建与核心业务，实现地图充电桩、车牌识别、充值、月卡续费及后台管理，微信与支付宝双端上线。</p>
-              <p class="tag-line">Vue 3 · 小程序 · 地图能力 · REST API</p>
+          </article>
+
+          <article class="timeline-item reveal">
+            <time>2021.10 — 2022.06</time>
+            <div class="timeline-item__content">
+              <div class="timeline-item__heading">
+                <h3>光伏云平台及 APP</h3>
+                <p>Vue 3 · UniApp · ECharts</p>
+              </div>
+              <div class="project-card__body">
+                <p>牵头 Web 与移动端项目搭建，完成设备管理、远程控制、实时监控与发电数据可视化。</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <time>2020.06 — 2021.03</time>
+            <div class="timeline-item__content">
+              <div class="timeline-item__heading">
+                <h3>智慧出行小程序及管理平台</h3>
+                <p>Vue 3 · 小程序 · REST API</p>
+              </div>
+              <div class="project-card__body">
+                <p>独立完成项目搭建与核心业务，实现地图充电桩、车牌识别、充值、月卡续费及后台管理，微信与支付宝双端上线。</p>
+              </div>
             </div>
           </article>
         </div>
@@ -214,9 +229,7 @@
 
       <section class="resume-section" id="experience" aria-labelledby="experience-title">
         <header class="section-lead reveal">
-          <p class="section-kicker">EXPERIENCE</p>
           <h2 id="experience-title">职业经历</h2>
-          <p>从视觉设计出发，逐步走向复杂产品的全栈研发与完整交付。</p>
         </header>
 
         <div class="timeline">
@@ -279,9 +292,7 @@
 
       <section class="resume-section" id="stack" aria-labelledby="stack-title">
         <header class="section-lead reveal">
-          <p class="section-kicker">TOOLKIT</p>
           <h2 id="stack-title">技术能力</h2>
-          <p>能力栈服务于交付，保持边界清晰，也能跨过边界解决问题。</p>
         </header>
 
         <div class="stack-list reveal">
@@ -301,20 +312,15 @@
             <h3>AI Engineering</h3>
             <p>OpenAI Codex · MCP · Skills · Multi-Agent · Git Worktree · Code Review</p>
           </div>
-          <div class="education">
-            <div>
-              <p class="section-kicker">EDUCATION</p>
-              <h3>四川轻化工大学</h3>
-              <p>工业设计 · 本科 · 2011.09 — 2015.07</p>
-            </div>
-            <strong>CET-4</strong>
+          <div class="stack-row">
+            <h3>英语能力</h3>
+            <p>CET-4</p>
           </div>
         </div>
       </section>
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
         <div class="contact__intro reveal">
-          <p class="section-kicker">CONTACT</p>
           <h2 id="contact-title">期待参与下一款<br />真正好用的 AI 产品。</h2>
         </div>
         <div class="contact__body reveal">

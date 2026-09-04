@@ -2,9 +2,7 @@ document.documentElement.classList.add("js");
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-requestAnimationFrame(() => {
-  document.body.classList.add("is-loaded");
-});
+document.body.classList.add("is-loaded");
 
 const year = document.querySelector("[data-year]");
 if (year) year.textContent = new Date().getFullYear();
@@ -28,7 +26,6 @@ if (prefersReducedMotion || !("IntersectionObserver" in window)) {
   revealItems.forEach((item) => revealObserver.observe(item));
 }
 
-const nav = document.querySelector(".nav");
 const navLinks = [...document.querySelectorAll(".nav__links a")];
 const sections = navLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
@@ -38,9 +35,6 @@ let ticking = false;
 
 function updateScrollState() {
   const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = documentHeight > 0 ? Math.min(1, window.scrollY / documentHeight) : 0;
-  nav.style.setProperty("--scroll-progress", progress.toFixed(4));
-
   const activationLine = window.scrollY + window.innerHeight * 0.34;
   let currentId = "";
 
