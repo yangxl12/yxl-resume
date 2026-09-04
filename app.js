@@ -6,7 +6,8 @@ requestAnimationFrame(() => {
   document.body.classList.add("is-loaded");
 });
 
-document.querySelector("[data-year]").textContent = new Date().getFullYear();
+const year = document.querySelector("[data-year]");
+if (year) year.textContent = new Date().getFullYear();
 
 const revealItems = document.querySelectorAll(".reveal");
 
@@ -47,6 +48,10 @@ function updateScrollState() {
     if (section.offsetTop <= activationLine) currentId = section.id;
   });
 
+  if (window.scrollY >= documentHeight - 2 && sections.length) {
+    currentId = sections[sections.length - 1].id;
+  }
+
   navLinks.forEach((link) => {
     const isActive = link.getAttribute("href") === `#${currentId}`;
     link.classList.toggle("is-active", isActive);
@@ -67,49 +72,6 @@ window.addEventListener(
   { passive: true },
 );
 
+window.addEventListener("resize", updateScrollState, { passive: true });
+
 updateScrollState();
-
-document.querySelectorAll(".interactive-glass").forEach((surface) => {
-  surface.addEventListener("pointermove", (event) => {
-    const bounds = surface.getBoundingClientRect();
-    const x = ((event.clientX - bounds.left) / bounds.width) * 100;
-    const y = ((event.clientY - bounds.top) / bounds.height) * 100;
-    surface.style.setProperty("--pointer-x", `${x.toFixed(1)}%`);
-    surface.style.setProperty("--pointer-y", `${y.toFixed(1)}%`);
-  });
-
-  surface.addEventListener("pointerleave", () => {
-    surface.style.removeProperty("--pointer-x");
-    surface.style.removeProperty("--pointer-y");
-  });
-});
-
-if (!prefersReducedMotion && window.matchMedia("(pointer: fine)").matches) {
-  document.querySelectorAll(".magnetic").forEach((button) => {
-    button.addEventListener("pointermove", (event) => {
-      const bounds = button.getBoundingClientRect();
-      const x = event.clientX - bounds.left - bounds.width / 2;
-      const y = event.clientY - bounds.top - bounds.height / 2;
-      button.style.transform = `translate3d(${(x * 0.12).toFixed(1)}px, ${(y * 0.16).toFixed(1)}px, 0)`;
-    });
-
-    button.addEventListener("pointerleave", () => {
-      button.style.transform = "translate3d(0, 0, 0)";
-    });
-  });
-}
-
-const mobilePrintFallback =
-  window.matchMedia("(pointer: coarse)").matches ||
-  (navigator.maxTouchPoints > 0 && window.matchMedia("(max-width: 900px)").matches);
-
-document.querySelectorAll("[data-print]").forEach((control) => {
-  control.addEventListener("click", (event) => {
-    // Mobile browsers and embedded WebViews often ignore window.print().
-    // Let the link open the prepared PDF there; desktop browsers keep the live print preview.
-    if (mobilePrintFallback) return;
-
-    event.preventDefault();
-    window.print();
-  });
-});
