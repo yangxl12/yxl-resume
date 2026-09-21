@@ -16,7 +16,7 @@
     />
     <title>杨小龙｜全栈开发・AI 应用开发</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260904" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -50,34 +50,10 @@
           <span class="nav__name">杨小龙</span>
         </a>
         <div class="nav__links" aria-label="章节导航">
-          <a href="#capabilities" aria-label="能力">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 3 9.8 8.1 4.5 10.2l5.3 2.1L12 17.5l2.2-5.2 5.3-2.1-5.3-2.1L12 3Z" />
-              <path d="m18.5 16 .8 1.8 1.7.7-1.7.7-.8 1.8-.8-1.8-1.7-.7 1.7-.7.8-1.8Z" />
-            </svg>
-            <span class="nav__label">能力</span>
-          </a>
-          <a href="#projects" aria-label="项目">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M4 6.5h6l1.7 2H20v9.8A1.7 1.7 0 0 1 18.3 20H5.7A1.7 1.7 0 0 1 4 18.3V6.5Z" />
-              <path d="M4 9h16" />
-            </svg>
-            <span class="nav__label">项目</span>
-          </a>
-          <a href="#experience" aria-label="经历">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="4" y="6.5" width="16" height="12.5" rx="2" />
-              <path d="M9 6.5V5.2A1.2 1.2 0 0 1 10.2 4h3.6A1.2 1.2 0 0 1 15 5.2v1.3M4 11.5c4.8 2.3 11.2 2.3 16 0M12 12.5v2" />
-            </svg>
-            <span class="nav__label">经历</span>
-          </a>
-          <a href="#contact" aria-label="联系">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="3.5" y="5.5" width="17" height="13" rx="2" />
-              <path d="m5 8 7 5 7-5" />
-            </svg>
-            <span class="nav__label">联系</span>
-          </a>
+          <a href="#capabilities" aria-label="能力"><span class="nav__label">能力</span></a>
+          <a href="#projects" aria-label="项目"><span class="nav__label">项目</span></a>
+          <a href="#experience" aria-label="经历"><span class="nav__label">经历</span></a>
+          <a href="#contact" aria-label="联系"><span class="nav__label">联系</span></a>
         </div>
         <a
           class="nav__print"
@@ -87,9 +63,6 @@
           data-print
           aria-label="打印或打开 PDF 简历"
         >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7 8V3h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14h10v7H7z" />
-          </svg>
           <span>导出</span>
         </a>
         <span class="nav__progress" aria-hidden="true"></span>
@@ -100,100 +73,57 @@
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero__content">
           <div class="hero__identity hero-entrance" style="--delay: 0.08s">
-            <figure class="profile-avatar glass-surface">
-              <img
-                src="./assets/yang-xiaolong.jpg"
-                width="300"
-                height="400"
-                alt="杨小龙职业头像"
-                fetchpriority="high"
-              />
-            </figure>
+            <div class="identity-stamp glass-surface" aria-label="杨小龙缩写">
+              <span>YL</span>
+              <small>PROFILE</small>
+            </div>
             <p class="eyebrow">
               <span class="status-dot" aria-hidden="true"></span>
               OPEN TO WORK · SHENZHEN
             </p>
           </div>
-          <h1 class="hero__title hero-entrance" id="hero-title" style="--delay: 0.15s">
-            <span>杨小龙</span>
-            <span class="hero__title-glow" aria-hidden="true">杨小龙</span>
-          </h1>
-          <p class="hero__role hero-entrance" style="--delay: 0.23s">
-            全栈开发 <span aria-hidden="true">/</span> AI 应用开发
-          </p>
-          <p class="hero__intro hero-entrance" style="--delay: 0.31s">
+          <div class="hero__headline hero-entrance" style="--delay: 0.15s">
+            <h1 class="hero__title" id="hero-title">
+              <span>杨小龙</span>
+              <span class="hero__title-glow" aria-hidden="true">杨小龙</span>
+            </h1>
+            <div class="hero__role">
+              <span>FULL-STACK · AI</span>
+              <strong>全栈开发<br />AI 应用开发</strong>
+            </div>
+          </div>
+          <p class="hero__intro hero-entrance" style="--delay: 0.25s">
             8 年 Web、桌面端与多端应用研发经验。擅长把复杂业务梳理成可靠产品，
             也把 AI 从能力演示推进到可治理、可测试、可交付的真实场景。
           </p>
 
-          <div class="hero__facts hero-entrance" style="--delay: 0.38s" aria-label="个人概况">
-            <span>8 年研发经验</span>
-            <span>深圳</span>
-            <span>本科</span>
+          <div class="hero__utility hero-entrance" style="--delay: 0.34s">
+            <div class="hero__facts" aria-label="个人概况">
+              <span>8 年研发经验</span>
+              <span>深圳</span>
+              <span>本科</span>
+            </div>
+
+            <div class="hero__actions">
+              <a class="button button--primary magnetic" href="#projects">
+                查看代表项目
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a class="button button--glass magnetic" href="mailto:18529521918@163.com">
+                联系我
+              </a>
+            </div>
           </div>
 
-          <div class="hero__actions hero-entrance" style="--delay: 0.45s">
-            <a class="button button--primary magnetic" href="#projects">
-              查看代表项目
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </a>
-            <a class="button button--glass magnetic" href="mailto:18529521918@163.com">
-              联系我
-            </a>
-          </div>
-
-          <div class="hero__contacts hero-entrance" style="--delay: 0.52s">
+          <div class="hero__contacts hero-entrance" style="--delay: 0.42s">
             <a href="tel:+8618529521918" aria-label="拨打电话 185 2952 1918">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0 1 22 16.92z" />
-              </svg>
+              <span class="contact-label">TEL</span>
               185 2952 1918
             </a>
             <a href="mailto:18529521918@163.com">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
-                <path d="m22 6-10 7L2 6" />
-              </svg>
+              <span class="contact-label">MAIL</span>
               18529521918@163.com
             </a>
-          </div>
-        </div>
-
-        <div class="hero__visual hero-entrance" style="--delay: 0.2s" aria-label="核心能力">
-          <div class="practice-panel interactive-glass" role="group" aria-label="核心能力">
-            <div class="practice-panel__header">
-              <span>CORE PRACTICE</span>
-              <span class="practice-panel__status"><i aria-hidden="true"></i> AI × ENGINEERING</span>
-            </div>
-
-            <div class="practice-panel__mark" aria-hidden="true">
-              <svg viewBox="0 0 160 160">
-                <defs>
-                  <linearGradient id="practice-stroke" x1="28" y1="24" x2="136" y2="140" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#76dcff" />
-                    <stop offset="0.52" stop-color="#3477ff" />
-                    <stop offset="1" stop-color="#8f7dff" />
-                  </linearGradient>
-                </defs>
-                <rect class="practice-panel__tile" x="25" y="25" width="110" height="110" rx="36" />
-                <path class="practice-panel__code" d="m66 61-19 19 19 19M94 61l19 19-19 19M88 53 72 107" />
-                <path class="practice-panel__signal" d="M80 25V12M135 80h13M80 135v13M25 80H12" />
-              </svg>
-            </div>
-
-            <div class="practice-panel__copy">
-              <span>AI APPLICATION ENGINEERING</span>
-              <strong>AI 应用工程</strong>
-            </div>
-
-            <ul class="practice-panel__skills" aria-label="核心能力列表">
-              <li>LLM · RAG</li>
-              <li>Electron</li>
-              <li>工程质量</li>
-              <li>产品体验</li>
-            </ul>
           </div>
         </div>
 
@@ -218,7 +148,7 @@
           <article class="capability-card interactive-glass reveal">
             <div class="capability-card__topline">
               <span class="capability-card__index">01</span>
-              <span class="capability-card__icon" aria-hidden="true">✦</span>
+              <span class="capability-card__signal">AI / 01</span>
             </div>
             <h3>AI 应用落地</h3>
             <p>熟悉多模型接入、AI Gateway、RAG、AI Skill、Token 治理与智能评审等企业场景。</p>
@@ -230,7 +160,7 @@
           <article class="capability-card interactive-glass reveal" style="--reveal-delay: 0.08s">
             <div class="capability-card__topline">
               <span class="capability-card__index">02</span>
-              <span class="capability-card__icon" aria-hidden="true">⌘</span>
+              <span class="capability-card__signal">SYS / 02</span>
             </div>
             <h3>桌面端架构</h3>
             <p>掌握 Electron 多进程、跨窗口通信、终端集成、资源隔离与 Windows 构建发布链路。</p>
@@ -242,7 +172,7 @@
           <article class="capability-card interactive-glass reveal" style="--reveal-delay: 0.16s">
             <div class="capability-card__topline">
               <span class="capability-card__index">03</span>
-              <span class="capability-card__icon" aria-hidden="true">{ }</span>
+              <span class="capability-card__signal">STACK / 03</span>
             </div>
             <h3>全栈交付</h3>
             <p>以 TypeScript 为主线，覆盖 Vue、React、Node.js、REST API 与多端业务的工程实现。</p>
@@ -254,7 +184,7 @@
           <article class="capability-card interactive-glass reveal" style="--reveal-delay: 0.24s">
             <div class="capability-card__topline">
               <span class="capability-card__index">04</span>
-              <span class="capability-card__icon" aria-hidden="true">◎</span>
+              <span class="capability-card__signal">CRAFT / 04</span>
             </div>
             <h3>工程与体验</h3>
             <p>具备视觉设计背景，兼顾架构可维护性、自动化验证、交互细节与最终产品质感。</p>
@@ -291,39 +221,14 @@
               </div>
             </div>
 
-            <div class="architecture" aria-label="Lightbox 架构示意">
-              <div class="architecture__header">
-                <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                <span>lightbox://workspace</span>
-                <span class="architecture__live"><i></i> LIVE</span>
-              </div>
-              <div class="architecture__body">
-                <div class="architecture__node architecture__node--main">
-                  <small>PROCESS 01</small>
-                  <strong>MAIN</strong>
-                  <span>Windows · PTY · Files</span>
-                </div>
-                <div class="architecture__flow" aria-hidden="true">
-                  <span></span><em>controlled IPC</em><span></span>
-                </div>
-                <div class="architecture__node architecture__node--preload">
-                  <small>SECURE BRIDGE</small>
-                  <strong>PRELOAD</strong>
-                  <span>Contracts · Adapters</span>
-                </div>
-                <div class="architecture__flow" aria-hidden="true">
-                  <span></span><em>contextBridge</em><span></span>
-                </div>
-                <div class="architecture__node architecture__node--renderer">
-                  <small>EXPERIENCE</small>
-                  <strong>RENDERER</strong>
-                  <span>Projects · AI · Terminal</span>
-                </div>
-                <div class="architecture__terminal" aria-hidden="true">
-                  <span>&gt; agent run --workspace</span>
-                  <span class="architecture__cursor"></span>
-                </div>
-              </div>
+            <div class="project-card__signal" aria-label="Lightbox 技术边界">
+              <p class="project-card__signal-kicker">LIGHTBOX / SYSTEM MAP</p>
+              <ol>
+                <li><strong>MAIN</strong><span>Windows · PTY · Files</span></li>
+                <li><strong>PRELOAD</strong><span>Contracts · Adapters</span></li>
+                <li><strong>RENDERER</strong><span>Projects · AI · Terminal</span></li>
+              </ol>
+              <p class="project-card__signal-foot">controlled IPC <span aria-hidden="true">↗</span> contextBridge</p>
             </div>
           </article>
 
@@ -334,8 +239,11 @@
             <p>
               为内部研发团队统一承载多模型接入、组织与额度管理、Token 管理、安全审计、PR 智能评审、RAG 知识库与 AI Skill。
             </p>
-            <div class="ai-flow" aria-label="AI 管理平台能力链路">
-              <span>MODEL</span><i></i><span>GATEWAY</span><i></i><span>TEAM</span><i></i><span>APP</span>
+            <div class="ai-index" aria-label="AI 管理平台能力链路">
+              <span>01</span><strong>MODEL</strong><em>multi-model access</em>
+              <span>02</span><strong>GATEWAY</strong><em>policy and quota</em>
+              <span>03</span><strong>TEAM</strong><em>shared knowledge</em>
+              <span>04</span><strong>APP</strong><em>auditable delivery</em>
             </div>
             <ul class="project-points project-points--short">
               <li>RBAC 与“公司 → 团队 → 成员”额度治理</li>
@@ -356,8 +264,9 @@
             <p>
               在文件管理器与侧栏模块化重构中引入 Contract、Host Adapter、Controller 与 Provider Gateway，相关验证覆盖 50 个测试文件。
             </p>
-            <div class="evidence-bar" aria-label="50 个测试文件，273 项用例">
-              <span style="--value: 92%"></span>
+            <div class="evidence-proof" aria-label="50 个测试文件，273 项用例">
+              <span><strong>50</strong> TEST FILES</span>
+              <span><strong>273</strong> CASES</span>
             </div>
           </article>
 
@@ -365,9 +274,7 @@
             <p class="project-card__type">IOT / MULTI-PLATFORM</p>
             <h3>光伏云平台及 APP</h3>
             <p>牵头 Web 与移动端项目搭建，完成设备管理、远程控制、实时监控与发电数据可视化。</p>
-            <div class="mini-chart" aria-hidden="true">
-              <span style="--h: 28%"></span><span style="--h: 45%"></span><span style="--h: 37%"></span><span style="--h: 72%"></span><span style="--h: 58%"></span><span style="--h: 86%"></span><span style="--h: 68%"></span>
-            </div>
+            <p class="project-card__note">设备管理 · 远程控制 · 实时监控 · 发电数据</p>
             <div class="project-card__meta">
               <span>Vue 3</span><span>UniApp</span><span>Pinia</span><span>ECharts</span>
             </div>
@@ -526,9 +433,7 @@
           <div class="contact-panel__actions">
             <a class="button button--primary button--large magnetic" href="mailto:18529521918@163.com">
               发送邮件
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
+              <span aria-hidden="true">↗</span>
             </a>
             <a class="contact-phone" href="tel:+8618529521918">
               <span>PHONE</span>
