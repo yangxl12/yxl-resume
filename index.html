@@ -7,7 +7,7 @@
       name="description"
       content="杨小龙的在线简历——全栈开发与 AI 应用开发，专注企业级 AI 产品、Electron 桌面端与高质量工程交付。"
     />
-    <meta name="theme-color" content="#eef4ff" />
+    <meta name="theme-color" content="#f4f5f7" />
     <meta property="og:type" content="profile" />
     <meta property="og:title" content="杨小龙｜全栈开发・AI 应用开发" />
     <meta
@@ -36,36 +36,34 @@
   <body>
     <a class="skip-link" href="#main">跳到主要内容</a>
 
-    <div class="ambient" aria-hidden="true">
-      <div class="ambient__orb ambient__orb--blue"></div>
-      <div class="ambient__orb ambient__orb--violet"></div>
-      <div class="ambient__orb ambient__orb--cyan"></div>
-      <div class="ambient__grain"></div>
-    </div>
-
     <header class="site-header" aria-label="页面导航">
-      <nav class="nav glass-surface">
-        <a class="nav__brand" href="#top" aria-label="返回顶部">
-          <span class="nav__monogram">YL</span>
-          <span class="nav__name">杨小龙</span>
-        </a>
+      <nav class="nav">
         <div class="nav__links" aria-label="章节导航">
+<<<<<<< HEAD
           <a href="#capabilities" aria-label="能力"><span class="nav__label">能力</span></a>
           <a href="#projects" aria-label="项目"><span class="nav__label">项目</span></a>
           <a href="#experience" aria-label="经历"><span class="nav__label">经历</span></a>
           <a href="#contact" aria-label="联系"><span class="nav__label">联系</span></a>
+=======
+          <a href="#capabilities">能力</a>
+          <a href="#projects">项目</a>
+          <a href="#experience">经历</a>
+          <a href="#contact">联系</a>
+>>>>>>> c20766254c8ed31e5c4c1b46d9b90ff188522f9c
         </div>
         <a
           class="nav__print"
           href="./assets/yang-xiaolong-resume.pdf"
           target="_blank"
           rel="noopener"
-          data-print
-          aria-label="打印或打开 PDF 简历"
+          aria-label="打开 PDF 简历，可在预览中打印"
         >
+<<<<<<< HEAD
           <span>导出</span>
+=======
+          PDF / 打印
+>>>>>>> c20766254c8ed31e5c4c1b46d9b90ff188522f9c
         </a>
-        <span class="nav__progress" aria-hidden="true"></span>
       </nav>
     </header>
 
@@ -133,68 +131,71 @@
         </a>
       </section>
 
-      <section class="section capabilities" id="capabilities" aria-labelledby="capabilities-title">
-        <div class="section-heading reveal">
-          <div>
-            <p class="section-kicker">PROFILE / 核心画像</p>
-            <h2 id="capabilities-title">能把一项复杂能力，<br />完整地带到用户手里。</h2>
-          </div>
-          <p>
-            从需求拆解、架构边界到界面交互、测试验证与发布交付，覆盖产品落地所需的关键环节。
-          </p>
-        </div>
+      <section class="resume-section" id="capabilities" aria-labelledby="capabilities-title">
+        <header class="section-lead reveal">
+          <h2 id="capabilities-title">核心能力</h2>
+        </header>
 
         <div class="capability-grid">
+<<<<<<< HEAD
           <article class="capability-card interactive-glass reveal">
             <div class="capability-card__topline">
               <span class="capability-card__index">01</span>
               <span class="capability-card__signal">AI / 01</span>
             </div>
+=======
+          <article class="capability-card reveal">
+>>>>>>> c20766254c8ed31e5c4c1b46d9b90ff188522f9c
             <h3>AI 应用落地</h3>
             <p>熟悉多模型接入、AI Gateway、RAG、AI Skill、Token 治理与智能评审等企业场景。</p>
-            <div class="chip-row" aria-label="AI 应用关键词">
-              <span>LLM</span><span>RAG</span><span>AI Gateway</span>
-            </div>
+            <p class="tag-line">LLM · RAG · AI Gateway</p>
           </article>
+<<<<<<< HEAD
 
           <article class="capability-card interactive-glass reveal" style="--reveal-delay: 0.08s">
             <div class="capability-card__topline">
               <span class="capability-card__index">02</span>
               <span class="capability-card__signal">SYS / 02</span>
             </div>
+=======
+          <article class="capability-card reveal" style="--reveal-delay: 0.05s">
+>>>>>>> c20766254c8ed31e5c4c1b46d9b90ff188522f9c
             <h3>桌面端架构</h3>
             <p>掌握 Electron 多进程、跨窗口通信、终端集成、资源隔离与 Windows 构建发布链路。</p>
-            <div class="chip-row" aria-label="桌面端关键词">
-              <span>Electron</span><span>IPC</span><span>node-pty</span>
-            </div>
+            <p class="tag-line">Electron · IPC · node-pty</p>
           </article>
+<<<<<<< HEAD
 
           <article class="capability-card interactive-glass reveal" style="--reveal-delay: 0.16s">
             <div class="capability-card__topline">
               <span class="capability-card__index">03</span>
               <span class="capability-card__signal">STACK / 03</span>
             </div>
+=======
+          <article class="capability-card reveal" style="--reveal-delay: 0.1s">
+>>>>>>> c20766254c8ed31e5c4c1b46d9b90ff188522f9c
             <h3>全栈交付</h3>
             <p>以 TypeScript 为主线，覆盖 Vue、React、Node.js、REST API 与多端业务的工程实现。</p>
-            <div class="chip-row" aria-label="全栈技术关键词">
-              <span>TypeScript</span><span>Vue 3</span><span>Node.js</span>
-            </div>
+            <p class="tag-line">TypeScript · Vue 3 · Node.js</p>
           </article>
+<<<<<<< HEAD
 
           <article class="capability-card interactive-glass reveal" style="--reveal-delay: 0.24s">
             <div class="capability-card__topline">
               <span class="capability-card__index">04</span>
               <span class="capability-card__signal">CRAFT / 04</span>
             </div>
+=======
+          <article class="capability-card reveal" style="--reveal-delay: 0.15s">
+>>>>>>> c20766254c8ed31e5c4c1b46d9b90ff188522f9c
             <h3>工程与体验</h3>
             <p>具备视觉设计背景，兼顾架构可维护性、自动化验证、交互细节与最终产品质感。</p>
-            <div class="chip-row" aria-label="工程质量关键词">
-              <span>Vitest</span><span>Playwright</span><span>UX</span>
-            </div>
+            <p class="tag-line">Vitest · Playwright · UX</p>
           </article>
         </div>
       </section>
 
+<<<<<<< HEAD
       <section class="section projects" id="projects" aria-labelledby="projects-title">
         <div class="section-heading section-heading--compact reveal">
           <div>
@@ -301,82 +302,149 @@
             设计训练让我关注用户如何理解产品；持续的工程实践，让这种关注最终成为可维护、可验证的系统。
           </p>
         </div>
+=======
+      <section class="resume-section" id="projects" aria-labelledby="projects-title">
+        <header class="section-lead reveal">
+          <h2 id="projects-title">代表项目</h2>
+        </header>
+>>>>>>> c20766254c8ed31e5c4c1b46d9b90ff188522f9c
 
         <div class="timeline">
           <article class="timeline-item reveal">
-            <div class="timeline-item__date">2026.03 — 至今</div>
-            <div class="timeline-item__marker" aria-hidden="true"><i></i></div>
-            <div class="timeline-item__content interactive-glass">
+            <time>2025.09 — 2026.02</time>
+            <div class="timeline-item__content">
               <div class="timeline-item__heading">
-                <div>
-                  <h3>博彦科技有限公司</h3>
-                  <p>Web 前端开发</p>
-                </div>
+                <h3>Lightbox 游戏美术辅助工具</h3>
+                <p>Electron · Vue 3 · TypeScript</p>
               </div>
-              <p>
-                参与腾讯外包 Lightbox 项目的前端研发。Lightbox 是面向游戏美术生产的 Electron 浏览器型辅助工具，负责缓存清理、内置终端、文件管理、历史记录、国际化与启动性能优化等功能；同时参与公司内部 AI Agent 项目，完成相关 UI 界面及业务流程功能开发。
-              </p>
+              <div class="project-card__body">
+                <p>
+                  腾讯 Lightbox 是面向游戏美术生产的 Electron 浏览器型辅助工具，整合项目空间、文件管理、内置终端与 AI 工具。
+                </p>
+                <ul class="project-points">
+                  <li>开发缓存清理、历史记录与国际化等浏览器功能</li>
+                  <li>建设多会话内置终端与跨场景文件管理能力</li>
+                  <li>参与启动链路分析与性能优化，改善客户端启动体验</li>
+                </ul>
+              </div>
             </div>
           </article>
 
           <article class="timeline-item reveal">
-            <div class="timeline-item__date">2022.10 — 2026.02</div>
-            <div class="timeline-item__marker" aria-hidden="true"><i></i></div>
-            <div class="timeline-item__content interactive-glass">
+            <time>2025.01 — 2025.08</time>
+            <div class="timeline-item__content">
               <div class="timeline-item__heading">
-                <div>
-                  <h3>深圳思凌科技术有限公司</h3>
-                  <p>全栈开发 / AI 应用开发</p>
-                </div>
-                <span>深圳</span>
+                <h3>企业级 AI 能力统一管理平台</h3>
+                <p>LLM · RAG · RBAC</p>
               </div>
-              <p>
-                负责企业级桌面客户端、AI 管理平台及物联网 Web / APP 研发；参与架构设计与核心模块建设，处理跨进程、跨窗口、复杂状态、构建发布与质量保障，并将 AI Coding 融入完整研发流程。
-              </p>
+              <div class="project-card__body">
+                <p>统一承载多模型接入、组织与额度、Token、安全审计、PR 智能评审、RAG 知识库与 AI Skill。</p>
+                <ul class="project-points">
+                  <li>建设 RBAC 与“公司—团队—成员”额度治理</li>
+                  <li>打通 Webhook、AI Review 与人工审批闭环</li>
+                </ul>
+              </div>
             </div>
           </article>
 
           <article class="timeline-item reveal">
-            <div class="timeline-item__date">2021.05 — 2022.09</div>
-            <div class="timeline-item__marker" aria-hidden="true"><i></i></div>
-            <div class="timeline-item__content interactive-glass">
+            <time>2024.05 — 2024.12</time>
+            <div class="timeline-item__content">
               <div class="timeline-item__heading">
-                <div>
-                  <h3>华平信息技术股份有限公司</h3>
-                  <p>Web 应用开发</p>
-                </div>
+                <h3>文件管理与侧栏模块化重构</h3>
+                <p>架构重构 · 自动化验证</p>
               </div>
-              <p>
-                独立承担智慧出行小程序与管理平台开发，完成项目架构、公共组件、网络层封装及地图充电桩等核心功能，推动微信与支付宝双端上线。
-              </p>
+              <div class="project-card__body">
+                <p>引入 Contract、Host Adapter、Controller 与 Provider Gateway，降低模块耦合并建立可验证的边界。</p>
+                <p class="project-result"><strong>273</strong> 项验证用例 <span>覆盖 50 个测试文件</span></p>
+              </div>
             </div>
           </article>
 
           <article class="timeline-item reveal">
-            <div class="timeline-item__date">2018.08 — 2021.04</div>
-            <div class="timeline-item__marker" aria-hidden="true"><i></i></div>
-            <div class="timeline-item__content interactive-glass">
+            <time>2021.10 — 2022.06</time>
+            <div class="timeline-item__content">
               <div class="timeline-item__heading">
-                <div>
-                  <h3>深圳软通动力信息技术有限公司</h3>
-                  <p>Web 应用开发</p>
-                </div>
+                <h3>光伏云平台及 APP</h3>
+                <p>Vue 3 · UniApp · ECharts</p>
               </div>
-              <p>
-                参与华为电商库存管理系统与 vmall 商城 PC 业务，负责复杂表单、表格、业务页面与接口联调，完成从视觉设计到软件开发的职业转型。
-              </p>
+              <div class="project-card__body">
+                <p>牵头 Web 与移动端项目搭建，完成设备管理、远程控制、实时监控与发电数据可视化。</p>
+              </div>
             </div>
           </article>
 
           <article class="timeline-item reveal">
-            <div class="timeline-item__date">2015.07 — 2018.07</div>
-            <div class="timeline-item__marker" aria-hidden="true"><i></i></div>
-            <div class="timeline-item__content interactive-glass">
+            <time>2020.06 — 2021.03</time>
+            <div class="timeline-item__content">
               <div class="timeline-item__heading">
-                <div>
-                  <h3>重庆澳洲玛旅行社有限公司</h3>
-                  <p>视觉设计</p>
-                </div>
+                <h3>智慧出行小程序及管理平台</h3>
+                <p>Vue 3 · 小程序 · REST API</p>
+              </div>
+              <div class="project-card__body">
+                <p>独立完成项目搭建与核心业务，实现地图充电桩、车牌识别、充值、月卡续费及后台管理，微信与支付宝双端上线。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="resume-section" id="experience" aria-labelledby="experience-title">
+        <header class="section-lead reveal">
+          <h2 id="experience-title">职业经历</h2>
+        </header>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <time>2026.03 — 至今</time>
+            <div class="timeline-item__content">
+              <div class="timeline-item__heading">
+                <h3>博彦科技有限公司</h3>
+                <p>Web 前端开发</p>
+              </div>
+              <p>参与腾讯外包 Lightbox 项目前端研发，负责缓存清理、内置终端、文件管理、历史记录、国际化与启动性能优化；同时参与内部 AI Agent 项目的界面与业务流程开发。</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <time>2022.10 — 2026.02</time>
+            <div class="timeline-item__content">
+              <div class="timeline-item__heading">
+                <h3>深圳思凌科技术有限公司</h3>
+                <p>全栈开发 / AI 应用开发 · 深圳</p>
+              </div>
+              <p>负责企业级桌面客户端、AI 管理平台及物联网 Web / APP 研发；参与架构与核心模块建设，处理跨进程、跨窗口、复杂状态、构建发布与质量保障，并将 AI Coding 融入研发流程。</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <time>2021.05 — 2022.09</time>
+            <div class="timeline-item__content">
+              <div class="timeline-item__heading">
+                <h3>华平信息技术股份有限公司</h3>
+                <p>Web 应用开发</p>
+              </div>
+              <p>独立承担智慧出行小程序与管理平台开发，完成项目架构、公共组件、网络层封装及地图充电桩等核心功能，推动微信与支付宝双端上线。</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <time>2018.08 — 2021.04</time>
+            <div class="timeline-item__content">
+              <div class="timeline-item__heading">
+                <h3>深圳软通动力信息技术有限公司</h3>
+                <p>Web 应用开发</p>
+              </div>
+              <p>参与华为电商库存管理系统与 vmall 商城 PC 业务，负责复杂表单、表格、业务页面与接口联调，完成从视觉设计到软件开发的职业转型。</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <time>2015.07 — 2018.07</time>
+            <div class="timeline-item__content">
+              <div class="timeline-item__heading">
+                <h3>重庆澳洲玛旅行社有限公司</h3>
+                <p>视觉设计</p>
               </div>
               <p>负责门户网站 UI、营销海报与 H5 视觉设计，建立设计规范意识与跨职能协作经验。</p>
             </div>
@@ -384,48 +452,37 @@
         </div>
       </section>
 
-      <section class="section stack" id="stack" aria-labelledby="stack-title">
-        <div class="stack-panel interactive-glass reveal">
-          <div class="stack-panel__intro">
-            <p class="section-kicker">TOOLKIT / 技术能力</p>
-            <h2 id="stack-title">能力栈服务于交付，<br />而不是停在关键词。</h2>
-            <p>保持边界清晰，也能跨过边界解决问题。</p>
-          </div>
+      <section class="resume-section" id="stack" aria-labelledby="stack-title">
+        <header class="section-lead reveal">
+          <h2 id="stack-title">技术能力</h2>
+        </header>
 
-          <div class="stack-list">
-            <div class="stack-row">
-              <h3>应用开发</h3>
-              <p>Vue 3 · TypeScript · React · Pinia · Vue Router · ECharts · UniApp</p>
-            </div>
-            <div class="stack-row">
-              <h3>桌面端</h3>
-              <p>Electron · Main / Preload / Renderer · WebContentsView · IPC · xterm.js · node-pty</p>
-            </div>
-            <div class="stack-row">
-              <h3>工程交付</h3>
-              <p>Vite · Node.js · Vitest · Playwright · electron-builder · NSIS · Git</p>
-            </div>
-            <div class="stack-row">
-              <h3>AI Engineering</h3>
-              <p>OpenAI Codex · MCP · Skills · Multi-Agent · Git Worktree · Code Review</p>
-            </div>
+        <div class="stack-list reveal">
+          <div class="stack-row">
+            <h3>应用开发</h3>
+            <p>Vue 3 · TypeScript · React · Pinia · Vue Router · ECharts · UniApp</p>
           </div>
-        </div>
-
-        <div class="education reveal">
-          <div>
-            <p class="section-kicker">EDUCATION / 教育背景</p>
-            <h3>四川轻化工大学</h3>
-            <p>工业设计 · 本科 · 2011.09 — 2015.07</p>
+          <div class="stack-row">
+            <h3>桌面端</h3>
+            <p>Electron · Main / Preload / Renderer · WebContentsView · IPC · xterm.js · node-pty</p>
           </div>
-          <span>CET-4</span>
+          <div class="stack-row">
+            <h3>工程交付</h3>
+            <p>Vite · Node.js · Vitest · Playwright · electron-builder · NSIS · Git</p>
+          </div>
+          <div class="stack-row">
+            <h3>AI Engineering</h3>
+            <p>OpenAI Codex · MCP · Skills · Multi-Agent · Git Worktree · Code Review</p>
+          </div>
+          <div class="stack-row">
+            <h3>英语能力</h3>
+            <p>CET-4</p>
+          </div>
         </div>
       </section>
 
-      <section class="section contact" id="contact" aria-labelledby="contact-title">
-        <div class="contact-panel interactive-glass reveal">
-          <div class="contact-panel__aurora" aria-hidden="true"></div>
-          <p class="section-kicker">LET'S BUILD / 保持联系</p>
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact__intro reveal">
           <h2 id="contact-title">期待参与下一款<br />真正好用的 AI 产品。</h2>
           <p>
             如果你正在寻找一位既能深入工程，也在意产品质感的全栈 / AI 应用开发者，欢迎联系我。
@@ -447,7 +504,7 @@
     <footer class="footer">
       <p>© <span data-year>2026</span> 杨小龙</p>
       <p>Full-stack Development · AI Application Development</p>
-      <a href="#top">回到顶部 ↑</a>
+      <a href="#top">回到顶部</a>
     </footer>
 
     <script src="./app.js" defer></script>
